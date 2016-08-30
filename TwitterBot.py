@@ -26,5 +26,6 @@ i = 1
 while i < len(Facts):
     TwitterBot.update_status(Facts[i]+' '+Hashtags[randint(0,len(Hashtags)-1)]) # Tweet a fact as well as a random hashtag
     outfile.write(str(i)+': '+Facts[i]) # Keep a log of tweeted facts in case server shuts off
+    outfile.flush()
     sleep(randint(3000, 3600)*5) # Tweet every 4-5 hours to prevent bot recognition
     i += 1
