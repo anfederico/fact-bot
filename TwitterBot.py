@@ -21,7 +21,7 @@ Auth = OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 Auth.set_access_token(ACCESS_TOKEN, ACCESS_SECRET)
 TwitterBot = API(Auth)
 
-outfile = open('Log.txt', 'w')
+outfile = open('Log.txt', 'a')
 i = 1
 while i < len(Facts):
     TwitterBot.update_status(Facts[i]+' '+Hashtags[randint(0,len(Hashtags)-1)]) # Tweet a fact as well as a random hashtag
