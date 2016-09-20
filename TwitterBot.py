@@ -10,13 +10,13 @@ infile.close()
 
 Hashtags = ['#science', '#facts', '#interestingfact', '#hmmm', '#follow', '#interesting', '#factoid', '#funfact', '#wow', '#braindrop']
 
-#Credentials to access Twitter API 
+# Credentials to access Twitter API 
 ACCESS_TOKEN    = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 ACCESS_SECRET   = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 CONSUMER_KEY    = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 CONSUMER_SECRET = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
-#Initiate the connection to Twitter API
+# Initiate the connection to Twitter API
 Auth = OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 Auth.set_access_token(ACCESS_TOKEN, ACCESS_SECRET)
 TwitterBot = API(Auth)
