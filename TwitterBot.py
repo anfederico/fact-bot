@@ -42,7 +42,7 @@ while i < len(Facts):
             r.raw.decode_content = True
             shutil.copyfileobj(r.raw, f)
 
-    TwitterBot.update_with_media('image.gif', Facts[i] + ' ' + Hashtags[randint(0,len(Hashtags)-1)] ' ' + Hashtags[randint(0,len(Hashtags)-1)])
+    TwitterBot.update_with_media('image.gif', Facts[i] + ' ' + Hashtags[randint(0,len(Hashtags)-1)])
     outfile.write(str(i)+': '+Facts[i]+'\n') # Keep a log of tweeted facts in case server shuts off
     outfile.flush()
     sleep(randint(3000, 3600)*5) # Tweet every 4-5 hours to prevent bot recognition
